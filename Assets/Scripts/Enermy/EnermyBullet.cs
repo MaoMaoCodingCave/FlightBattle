@@ -19,5 +19,10 @@ public class EnermyBullet : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.down * speed * Time.deltaTime;
+
+        if (transform.position.y <= -6f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
